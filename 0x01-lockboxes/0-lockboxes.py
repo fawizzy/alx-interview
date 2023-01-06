@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''LockBoxes Challenge'''
+
+
 def canUnlockAll(boxes):
     '''determines if all the boxes can be opened or not
     Returns:
@@ -8,21 +10,20 @@ def canUnlockAll(boxes):
     '''
 
     unlocked = [0]
+    print(boxes)
     if (type(boxes) is not list):
         return False
     for i in range(len(boxes)):
         if (type(boxes[i]) is not list):
             return False
         for j in boxes[i]:
-            if (j == i):
+            if (type(j) is not int):
+                continue
+            if (j == i or j > len(boxes) - 1):
                 continue
             if j not in unlocked:
                 unlocked.append(j)
-    
+    print(unlocked)
     if (len(unlocked) != len(boxes)):
-       return False
-        
-    
-    
-     
+        return False
     return True
