@@ -10,7 +10,6 @@ def canUnlockAll(boxes):
     '''
 
     unlocked = [0]
-    print(boxes)
     if (type(boxes) is not list):
         return False
     for i in range(len(boxes)):
@@ -23,7 +22,6 @@ def canUnlockAll(boxes):
                 continue
             if j not in unlocked:
                 unlocked.append(j)
-    print(unlocked)
     if (len(unlocked) != len(boxes)):
         return False
     return True
