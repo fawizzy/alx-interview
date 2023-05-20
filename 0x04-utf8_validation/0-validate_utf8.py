@@ -2,6 +2,8 @@
 """
 Define validUTF8(data) function that validates whether a
 """
+
+
 def validUTF8(data):
     """
     Determines if a given data set represents a valid UTF-8 encoding.
@@ -36,5 +38,4 @@ def validUTF8(data):
             else:
                 return False
 
-    # If num_bytes is not 0 at the end, it means there's an incomplete character
     return num_bytes == 0
