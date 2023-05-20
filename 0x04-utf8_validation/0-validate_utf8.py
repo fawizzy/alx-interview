@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Validate utf-8 for data
+Define validUTF8(data) function that validates whether a
 """
 def validUTF8(data):
     """
